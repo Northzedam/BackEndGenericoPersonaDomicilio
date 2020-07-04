@@ -7,6 +7,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 	@Entity
@@ -24,6 +25,7 @@ import javax.persistence.OneToOne;
 		private int dni;
 
 		@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+		@JoinColumn(name="domicilio_id")
 		private Domicilio domicilio;
 		
 		//constructor
